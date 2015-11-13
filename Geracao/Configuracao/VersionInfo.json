@@ -1,0 +1,18 @@
+﻿{
+    "VersaoPrograma": "0.1.0",
+    "CompanyName": "Global ECS",
+    "PreRelease": true,
+    "LegalCopyright": "Copyright 2015",
+    "LegalTrademarks": "Global ECS todos os direitos reservados",
+    "PrivateBuild": "",
+    "SpecialBuild": "Para Homologação",
+    "Produtos": 
+    [
+        {
+            "FileDescription": "Global Financeiro - Debug",
+            "OriginalFilename": "GlobalFinanceiroDebug.exe",
+            "ProductName": "Global Financeiro",
+            "Sufixo": "GF"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+C:\Windows\System32\wscript bin\GeraFontes.wsf

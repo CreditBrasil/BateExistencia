@@ -95,10 +95,28 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Core\FastMM4.pas"/>
+        <DCCReference Include="Core\FastMM4Messages.pas"/>
+        <DCCReference Include="Core\Core.ArrayClass.pas"/>
+        <DCCReference Include="Core\Core.ArrayIntf.pas"/>
+        <DCCReference Include="Core\Core.CacheCod.pas"/>
+        <DCCReference Include="Core\Core.CMC7.pas"/>
+        <DCCReference Include="Core\Core.ConfiguracoesRegionais.pas"/>
+        <DCCReference Include="Core\Core.CsvStrings.pas"/>
+        <DCCReference Include="Core\Core.GlobalMetodos.pas"/>
+        <DCCReference Include="Core\Core.Json.pas"/>
+        <DCCReference Include="Core\Core.Metodos.pas"/>
+        <DCCReference Include="Core\Core.ServiceLocator.pas"/>
+        <DCCReference Include="Core\Core.Singleton.pas"/>
+        <DCCReference Include="Core\Core.StringToGUID.pas"/>
+        <DCCReference Include="Core\Core.Tipos.pas"/>
         <DCCReference Include="Form.Principal.pas">
             <Form>Form1</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="MVC\MVC.Iniciadores.pas"/>
+        <DCCReference Include="Outros\BE.Conexao.pas"/>
+        <DCCReference Include="Outros\BE.Configuracao.pas"/>
+        <DCCReference Include="ActiveRecord\AR.ActiveRecord.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
