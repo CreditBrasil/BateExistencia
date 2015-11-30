@@ -23,6 +23,7 @@ type
     procedure SetUserCode(const AValue: string);
     procedure SetUserName(const AValue: string);
 
+    function ExecuteAndReturnRecordsAffected(const ASQL: string): Integer;
     function StartTransaction: IActiveRecordTransaction;
     property UserCode: string read GetUserCode write SetUserCode;
     property UserName: string read GetUserName write SetUserName;
@@ -821,6 +822,7 @@ type
     procedure SetUserCode(const AValue: string);
     procedure SetUserName(const AValue: string);
 
+    function ExecuteAndReturnRecordsAffected(const ASQL: string): Integer;
     function StartTransaction: IActiveRecordTransaction;
     { IActiveRecordConnectionADO }
     function GetADOConnection: _Connection;
@@ -3089,6 +3091,19 @@ destructor TActiveRecordConnectionADO.Destroy;
 begin
   FADOConnection := nil;
   inherited;
+end;
+
+function TActiveRecordConnectionADO.ExecuteAndReturnRecordsAffected(const ASQL: string): Integer;
+var
+  LCommand: _Command;
+  LRecordsAffected: OleVariant;
+begin
+  LCommand := CoCommand.Create;
+  LCommand.CommandType := adCmdText;
+  LCommand.CommandText := ASQL;
+  LCommand.Set_ActiveConnection(FADOConnection);
+  LCommand.Execute(LRecordsAffected, EmptyParam, adExecuteNoRecords);
+  Result := LRecordsAffected;
 end;
 
 function TActiveRecordConnectionADO.GetADOConnection: _Connection;

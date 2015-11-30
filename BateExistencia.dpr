@@ -17,17 +17,19 @@ uses
   Core.Singleton in 'Core\Core.Singleton.pas',
   Core.StringToGUID in 'Core\Core.StringToGUID.pas',
   Core.Tipos in 'Core\Core.Tipos.pas',
-  Form.Principal in 'Form.Principal.pas' {Form1},
   MVC.Iniciadores in 'MVC\MVC.Iniciadores.pas',
   BE.Conexao in 'Outros\BE.Conexao.pas',
   BE.Configuracao in 'Outros\BE.Configuracao.pas',
-  AR.ActiveRecord in 'ActiveRecord\AR.ActiveRecord.pas';
+  AR.ActiveRecord in 'ActiveRecord\AR.ActiveRecord.pas',
+  Form.Principal in 'Form.Principal.pas' {Principal};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Iniciadores.Iniciar;
+  Application.CreateForm(TPrincipal, Principal);
   Application.Run;
+  Iniciadores.Finalizar;
 end.
