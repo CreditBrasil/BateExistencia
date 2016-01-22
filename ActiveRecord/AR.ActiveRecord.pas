@@ -3101,6 +3101,7 @@ begin
   LCommand := CoCommand.Create;
   LCommand.CommandType := adCmdText;
   LCommand.CommandText := ASQL;
+  LCommand.CommandTimeout := 90;
   LCommand.Set_ActiveConnection(FADOConnection);
   LCommand.Execute(LRecordsAffected, EmptyParam, adExecuteNoRecords);
   Result := LRecordsAffected;
