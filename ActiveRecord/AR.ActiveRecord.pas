@@ -3080,8 +3080,8 @@ begin
   FADOConnection := CoConnection.Create;
   FADOConnection.ConnectionTimeout := 30;
   //Tempo máximo que gasta para conectar no banco (30 segundos)
-  FADOConnection.CommandTimeout := 90;
-  //Tempo máximo de resposta de uma consulta ou comando (3 minutos)
+  FADOConnection.CommandTimeout := 450;
+  //Tempo máximo de resposta de uma consulta ou comando (15 minutos)
   FADOConnection.CursorLocation := adUseClient;
   //Força a não usar cursores no banco.
   FADOConnection.Open(AConnectionString, '', '', 0);
