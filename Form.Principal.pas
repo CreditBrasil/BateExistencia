@@ -76,6 +76,7 @@ begin
     PB.Position := 0;
     cmdCarga.Enabled := True;
   end;
+  ShowMessage('Carga terminada com sucesso.');
 end;
 
 function TPrincipal.CarregaScript(const AArquivo: string): string;
